@@ -40,7 +40,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == true) {
-		console.log("Muted")
+		console.log("Unmuted")
 		document.querySelector("#mute").innerHTML = "Mute";
 		video.muted = false;
 		
@@ -48,6 +48,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 	else{
 		document.querySelector("#mute").innerHTML = "Unmute";
 		video.muted = true;
+		console.log("Muted")
 	}
 	
 });
@@ -56,17 +57,21 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this.value)
 	document.querySelector("#volume").innerHTML = this.value;
-	video.volume = this.value;
+	video.volume = this.value / 100; 
 });
 
 
+document.querySelector("#old").addEventListener("click", function() {
+	video.classList.add("oldTime");
+	
+})
+
+document.querySelector("#original").addEventListener("click", function() {
+	video.classList.remove("oldTime");
+})
 
 
 
 
 
 
-//change text of volume is 
-//change volume of video
-//https://www.w3schools.com/js/js_if_else.asp
-//video.faster(vid.playbackRate = 0.5);
