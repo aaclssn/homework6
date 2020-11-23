@@ -31,10 +31,27 @@ document.querySelector("#slower").addEventListener("click", function() {
 });
 
 
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Current")
+	video.currentTime += 5;
+	console.log(video.currentTime)
+});
+
+
+
+
+
 document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this.value)
 	
 });
+
+
+
+
+
+
+
 
 //change text of volume is 
 //change volume of video
