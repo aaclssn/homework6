@@ -39,7 +39,11 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 
+document.querySelector("#mute").addEventListener("click", function() {
+	console.log("Muted")
+	video.muted = true;
 
+});
 
 
 document.querySelector("#volumeSlider").addEventListener("change", function() {
