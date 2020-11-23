@@ -38,7 +38,6 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.loop = true;
 });
 
-
 document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == true) {
 		console.log("Muted")
@@ -56,7 +55,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 document.querySelector("#volumeSlider").addEventListener("change", function() {
 	console.log(this.value)
-	
+	document.querySelector("#volume").innerHTML = this.value;
+	video.volume = this.value;
 });
 
 
